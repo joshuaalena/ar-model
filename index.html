@@ -6,12 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="demo-styles.css" />
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuaalena/ar-model/main/demo-styles.css" />
 
-    <!-- The following libraries and polyfills are recommended to maximize browser support -->
-    <!-- NOTE: you must adjust the paths as appropriate for your project -->
-
-    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types XXXX   environment-image="https://cdn.glitch.global/f1af33e8-e0e4-41ad-9861-cb1af4dbfc0d/aircraft_workshop_01_1k.hdr" -->
     <script
       src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
       defer
@@ -27,19 +24,13 @@
         shadow-intensity="1"
         camera-controls
         autoplay
-        environment-image="https://cdn.glitch.global/f1af33e8-e0e4-41ad-9861-cb1af4dbfc0d/aircraft_workshop_01_1k.hdr"
+  
         exposure="1.2"
         shadow-softness="1.2"
         auto-rotate
-        ar
-        <div
-        class="demo"
-        style="
-          background: linear-gradient(#ffffff, #fcf4f4);
-          overflow-x: hidden;
-        "
-      >
+        ar>
       </model-viewer>
+
       <section class="attribution">
         <span>
           <h1></h1>
@@ -47,8 +38,8 @@
             <a
               href="https://poly.google.com/view/dLHpzNdygsg"
               target="_blank"
-            ></a
-          ></span>
+            ></a>
+          </span>
         </span>
         <a>
           <img />
@@ -58,7 +49,6 @@
     </div>
 
     <!-- 💁 Include both scripts below to support all browsers! -->
-
     <!-- Loads <model-viewer> for modern browsers: -->
     <script
       type="module"
