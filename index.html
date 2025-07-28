@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>3D AR Model</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #f9f9f9;
-      text-align: center;
-    }
-    model-viewer {
-      width: 100%;
-      height: 100vh;
-      background: #eee;
-    }
-    .attribution {
-      margin-top: -4em;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 1em;
-      font-size: 0.9em;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <title>&lt;model-viewer&gt; example</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <model-viewer 
-    src="https://raw.githubusercontent.com/joshuaalena/ar-model/main/Sculpture.glb"
-    ios-src="https://raw.githubusercontent.com/joshuaalena/ar-model/main/Sculpture.usdz"
-    poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
-    alt="A 3D model of an astronaut"
-    shadow-intensity="1"
-    camera-controls
-    auto-rotate
-    ar
-    ar-modes="scene-viewer webxr quick-look">
-  </model-viewer>
+    <!-- ✅ Correct link to external CSS -->
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/joshuaalena/ar-model/main/demo-styles.css" />
 
-  <div class="attribution">
-    <h1>Astronaut</h1>
-    <p>Model from <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Google Poly</a> · 
-    <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a></p>
-  </div>
+    <!-- Optional polyfill -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <div id="card" style="background: linear-gradient(#ffffff, #fcf4f4); overflow-x: hidden;">
+      <!-- ✅ Correct model-viewer syntax -->
+      <model-viewer
+        src="https://raw.githubusercontent.com/joshuaalena/ar-model/main/Sculpture.glb"
+        ios-src="https://raw.githubusercontent.com/joshuaalena/ar-model/main/Sculpture.usdz"
+        alt="MY 3D Character"
+        shadow-intensity="1"
+        camera-controls
+        autoplay
+        auto-rotate
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        environment-image="https://cdn.glitch.global/f1af33e8-e0e4-41ad-9861-cb1af4dbfc0d/aircraft_workshop_01_1k.hdr"
+        exposure="1.2"
+        shadow-softness="1.2"
+        style="width: 100%; height: 100vh;"
+      >
+      </model-viewer>
 
-</body>
+      <section class="attribution">
+        <h1>MY 3D Character</h1>
+        <span>
+          <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Original Model</a>
+        </span>
+        <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
+        </a>
+      </section>
+    </div>
+
+    <!-- Loads <model-viewer> for modern browsers -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
 </html>
